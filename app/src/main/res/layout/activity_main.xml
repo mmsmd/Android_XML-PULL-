@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="100dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/app_white"
+        android:text="Sign Up"
+        android:textSize="40dp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_username"
+        android:textColorHint="@color/app_white"
+        android:textColor="@color/app_white"
+        android:layout_below="@id/tv_1"/>
+
+    <EditText
+        android:id="@+id/et_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_age"
+        android:textColorHint="@color/app_white"
+        android:textColor="@color/app_white"
+        android:layout_below="@id/et_name"/>
+
+
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:hint="@string/hint_pwd"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/et_age"
+        android:textColor="@color/app_white"
+        android:textColorHint="@color/app_white"/>
+
+    <RadioGroup
+        android:layout_below="@+id/et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sex_group"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_white"
+            android:checked="true"
+            android:text="男"
+            android:id="@+id/male"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_white"
+            android:text="女"
+            android:id="@+id/female"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ly_1"
+        android:layout_below="@id/sex_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_below="@id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cb_re"
+            android:textColor="@color/app_white"
+            android:layout_gravity="left"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="@string/button_cancel"
+            android:textColor="@color/app_white"
+            android:textSize="14sp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <Button
+        android:onClick="onCacl"
+        android:id="@+id/bt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_1"
+        android:layout_marginTop="35dp"
+        android:text="@string/button_confirm"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/app_white"
+        android:background="@drawable/button_drawable"/>
+
+
+</RelativeLayout>
